@@ -5,6 +5,7 @@ local function my_on_attach(bufnr)
 
   vim.keymap.set("n", "o", "", { buffer = bufnr })
   vim.keymap.set("n", "l", api.node.open.edit, { buffer = bufnr, noremap = true, silent = true })
+  vim.keymap.set("n", "h", api.node.navigate.parent_close, { buffer = bufnr, noremap = true, silent = true })
 
   -- local orig_input = vim.ui.input
   --
